@@ -21,8 +21,8 @@ class IconMaker
     end
 
     def path
-      if File.exists?(Rails.root.join("app/icons/#{@key}.rb"))
-        File.read(Rails.root.join("app/icons/#{@key}.rb"))
+      if File.exists?(Rails.root.join("app/icons/#{@key}.svg"))
+        File.read(Rails.root.join("app/icons/#{@key}.svg"))
       else
         ""
       end

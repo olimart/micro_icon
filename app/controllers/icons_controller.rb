@@ -12,7 +12,7 @@ class IconsController < ApplicationController
 
   def paths
     @paths = []
-    Dir.glob(Rails.root.join("app/icons/*.rb")) do |path_file|
+    Dir.glob(Rails.root.join("app/icons/*.svg")) do |path_file|
       icon_name = get_icon_name(path_file)
       @paths << { icon: icon_name, path: File.read(path_file).to_s }
     end
@@ -24,8 +24,7 @@ class IconsController < ApplicationController
 
     def get_icon_name(path_file)
       s = path_file.split("/").last
-      s.gsub(".rb", "")
-
+      s.gsub(".svg", "")
     end
 
 end
