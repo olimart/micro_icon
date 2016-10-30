@@ -5,7 +5,7 @@
     <input v-model="backgroundColor" placeholder="background" class="input">
   </div>
   <div v-for="icon in icons">
-    <div class="sm-col sm-col-4 md-col-1 lg-col-1 center">
+    <div class="py1 sm-col sm-col-4 md-col-1 lg-col-1 center">
       <a v-bind:href="icon.icon + '/' + size + '/' + color">
         <icon :path=icon.path :size=size :color=color></icon/>
       </a>
