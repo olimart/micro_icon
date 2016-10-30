@@ -1,0 +1,14 @@
+<div id="app" class="clearfix" v-bind:style="{ backgroundColor: backgroundColor, color: color }">
+  <div class="py2 center">
+    <input v-model="size" type="range" step="4" min="16" max="64">
+    <input v-model="color" placeholder="color" class="input">
+    <input v-model="backgroundColor" placeholder="background" class="input">
+  </div>
+  <div v-for="icon in icons">
+    <div class="sm-col sm-col-4 md-col-1 lg-col-1 center">
+      <a v-bind:href="icon.icon + '/' + size + '/' + color">
+        <icon :path=icon.path :size=size :color=color></icon/>
+      </a>
+    </div>
+  </div>
+</div>

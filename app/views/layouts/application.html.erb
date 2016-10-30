@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t 'site_name' %></title>
+    <%= csrf_meta_tags %>
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+  <body>
+    <div class="px3 lg-px4">
+      <header class="py4">
+        <h1><%= t 'site_name' %> Service</h1>
+      </header>
+    </div>
+
+    <%= yield %>
+
+    <div class="px3 py2">
+      <%= link_to "Made by yafoy", "http://yafoy.com" %>
+    </div>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>
