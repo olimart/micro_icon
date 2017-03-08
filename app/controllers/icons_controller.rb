@@ -17,7 +17,7 @@ class IconsController < ApplicationController
       @paths << { icon: icon_name, path: File.read(path_file).to_s }
     end
 
-    render json: @paths.to_json, status: :ok
+    render json: @paths.sort_by { |i| i["icon"] }.to_json, status: :ok
   end
 
   private
